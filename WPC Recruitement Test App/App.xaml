@@ -1,0 +1,26 @@
+﻿<Application x:Class="WPCRecruitmentTestApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="Infrastructure/ButtonTemplates.xaml" />
+                <ResourceDictionary Source="Infrastructure/MaterialDesignStyles.xaml"/>
+                <ResourceDictionary>
+                    <Color x:Key="Primary200">#61bef6</Color>
+                    <Color x:Key="Primary500">#1a8ec3</Color>
+                    <Color x:Key="Primary700">#006192</Color>
+                    <Color x:Key="Accent200">#ffb143</Color>
+                    <Color x:Key="Accent500">#ff8000</Color>
+                    <Color x:Key="Accent700">#c55100</Color>
+                </ResourceDictionary>
+                <materialDesign:CustomColorTheme
+                    BaseTheme="Light"
+                    PrimaryColor="{StaticResource Primary500}"
+                    SecondaryColor="{StaticResource Accent500}" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

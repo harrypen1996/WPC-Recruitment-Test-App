@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\dev\\wpc-recruitment-test\\WPC Recruitement Test App\\aVDS Realtime Utility App.csproj": {}
+  },
+  "projects": {
+    "C:\\dev\\wpc-recruitment-test\\WPC Recruitement Test App\\aVDS Realtime Utility App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\wpc-recruitment-test\\WPC Recruitement Test App\\aVDS Realtime Utility App.csproj",
+        "projectName": "ABD.aVDSRealtimeUtilityApp",
+        "projectPath": "C:\\dev\\wpc-recruitment-test\\WPC Recruitement Test App\\aVDS Realtime Utility App.csproj",
+        "packagesPath": "C:\\Users\\harry.pengelly\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\wpc-recruitment-test\\WPC Recruitement Test App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\harry.pengelly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://hex:8585/nuget/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\dev\\wpc-recruitment-test\\Resources\\Resources.csproj": {
+                "projectPath": "C:\\dev\\wpc-recruitment-test\\Resources\\Resources.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "ABD.Core": {
+              "target": "Package",
+              "version": "[1.7.89, )"
+            },
+            "ABD.Localisation.Common": {
+              "target": "Package",
+              "version": "[1.0.131, )"
+            },
+            "ABD.Messenger.Common": {
+              "target": "Package",
+              "version": "[1.5.18, )"
+            },
+            "ABD.Services.Common": {
+              "target": "Package",
+              "version": "[1.7.89, )"
+            },
+            "ABD.Windows.Services.Common": {
+              "target": "Package",
+              "version": "[1.0.113, )"
+            },
+            "DevExpress.WindowsDesktop.Mvvm": {
+              "target": "Package",
+              "version": "[19.2.7, )"
+            },
+            "DevExpress.WindowsDesktop.Wpf.Core": {
+              "target": "Package",
+              "version": "[19.2.7, )"
+            },
+            "DevExpress.WindowsDesktop.Wpf.Grid": {
+              "target": "Package",
+              "version": "[19.2.7, )"
+            },
+            "DevExpress.WindowsDesktop.Wpf.Navigation": {
+              "target": "Package",
+              "version": "[19.2.7, )"
+            },
+            "DevExpress.WindowsDesktop.Wpf.Themes.Office2019Black": {
+              "target": "Package",
+              "version": "[19.2.7, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Ninject": {
+              "target": "Package",
+              "version": "[3.3.4, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.9.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "WAEComms.Common": {
+              "target": "Package",
+              "version": "[1.4.16, )"
+            },
+            "ninject.extensions.conventions": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

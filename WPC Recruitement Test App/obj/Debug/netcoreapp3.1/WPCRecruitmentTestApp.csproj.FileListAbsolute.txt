@@ -1,0 +1,22 @@
+C:\dev\wpc-recruitment-test\bin\debug\netcoreapp3.1\WPCRecruitmentTestApp.exe
+C:\dev\wpc-recruitment-test\bin\debug\netcoreapp3.1\WPCRecruitmentTestApp.deps.json
+C:\dev\wpc-recruitment-test\bin\debug\netcoreapp3.1\WPCRecruitmentTestApp.runtimeconfig.json
+C:\dev\wpc-recruitment-test\bin\debug\netcoreapp3.1\WPCRecruitmentTestApp.runtimeconfig.dev.json
+C:\dev\wpc-recruitment-test\bin\debug\netcoreapp3.1\WPCRecruitmentTestApp.dll
+C:\dev\wpc-recruitment-test\bin\debug\netcoreapp3.1\WPCRecruitmentTestApp.pdb
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\Infrastructure\ButtonTemplates.baml
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\Infrastructure\MaterialDesignStyles.baml
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\App.baml
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\Common\Views\ShellView.g.cs
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\App.g.cs
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp_MarkupCompile.cache
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp_MarkupCompile.lref
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\Common\Views\ShellView.baml
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp.g.resources
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp.AssemblyInfoInputs.cache
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp.AssemblyInfo.cs
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp.csproj.CoreCompileInputs.cache
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp.csproj.CopyComplete
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp.dll
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp.pdb
+C:\dev\wpc-recruitment-test\WPC Recruitement Test App\obj\Debug\netcoreapp3.1\WPCRecruitmentTestApp.genruntimeconfig.cache

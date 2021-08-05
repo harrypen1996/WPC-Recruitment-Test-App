@@ -1,0 +1,164 @@
+﻿<dx:ThemedWindow x:Class="WPCRecruitmentTestApp.Common.Views.ShellView"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+                 xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                 mc:Ignorable="d"
+                 dx:ThemeManager.ThemeName="Office2019Black"
+                 Title="{Binding WindowTitle}"
+                 MinHeight="600" MinWidth="800"
+                 WindowStartupLocation="CenterScreen"
+                 Height="1200"
+                 Width="1600"
+                 xmlns:viewModels="clr-namespace:WPCRecruitmentTestApp.Common.ViewModels"
+                 xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+                 xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                 d:DataContext="{d:DesignInstance {x:Type viewModels:ShellViewModel}, IsDesignTimeCreatable=False}"
+                 Loaded="{DXEvent Handler=Initialise(), CatchExceptions=False}">
+
+    <Window.Resources>
+        <Style x:Key="RowStyle" TargetType="{x:Type dxg:RowControl}">
+            <Style.Triggers>
+                <Trigger Property="SelectionState" Value="Selected">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <SolidColorBrush>
+                                <SolidColorBrush.Color>
+                                    <Color A="255" R="26" G="142" B="195"/>
+                                </SolidColorBrush.Color>
+                            </SolidColorBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="SelectionState" Value="FocusedAndSelected">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <SolidColorBrush>
+                                <SolidColorBrush.Color>
+                                    <Color A="255" R="26" G="142" B="195"/>
+                                </SolidColorBrush.Color>
+                            </SolidColorBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="SelectionState" Value="Focused">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <SolidColorBrush>
+                                <SolidColorBrush.Color>
+                                    <Color A="255" R="26" G="142" B="195"/>
+                                </SolidColorBrush.Color>
+                            </SolidColorBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+
+    <dxmvvm:Interaction.Behaviors>
+        <dxmvvm:OpenFileDialogService />
+        <dxmvvm:SaveFileDialogService />
+        <dx:DialogService>
+            <dx:DialogService.DialogStyle>
+                <Style TargetType="Window">
+                    <Setter Property="SizeToContent" Value="WidthAndHeight" />
+                    <Setter Property="WindowStyle" Value="ToolWindow" />
+                    <Setter Property="ResizeMode" Value="NoResize" />
+                </Style>
+            </dx:DialogService.DialogStyle>
+        </dx:DialogService>
+    </dxmvvm:Interaction.Behaviors>
+
+
+    <Grid Background="{DynamicResource MaterialDesignDarkBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="20,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0"  Text="Latitude:" FontSize="16"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" />
+
+            <TextBox Grid.Row="0" Grid.Column="1" FontSize="16" Text="{Binding Latitude, Mode=TwoWay}"
+                     Style="{DynamicResource MaterialDesignTextBox}" HorizontalAlignment="Left"
+                     VerticalAlignment="Center" Foreground="White" MinWidth="150"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Longitude:" FontSize="16"
+                       Style="{DynamicResource MaterialDesignCaptionTextBlock}"
+                       HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" />
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Longitude, Mode=TwoWay}" FontSize="16"
+                     Style="{DynamicResource MaterialDesignTextBox}" HorizontalAlignment="Left"
+                     VerticalAlignment="Center" Foreground="White" MinWidth="150"/>
+
+            <dxe:DateEdit Grid.Row="0" ShowToday="False" Height="50" Width="150" DateTime="{Binding SelectedDateTime, Mode=TwoWay}" Grid.Column="2" FontSize="16" MaskUseAsDisplayFormat="True" Mask="MMMM yyyy">
+                <dxe:DateEdit.StyleSettings>
+                    <dxe:DateEditPickerStyleSettings />
+                </dxe:DateEdit.StyleSettings>
+            </dxe:DateEdit>
+
+            <Button Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" Content="SEARCH"
+                    FontSize="16" Style="{DynamicResource MaterialDesignWideButton}"
+                    Command="{Binding SearchForCrimesAsyncCommand}" Margin="8,8,8,8" Width="200" Height="50"
+                    Foreground="White"
+                    IsEnabled="{Binding IsSafeToSearch}" />
+
+            <ListView Grid.Row="0" Grid.RowSpan="2" Grid.Column="3" ItemsSource="{Binding SumCrimeData}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="White" Margin="2,2,2,2" Text="{Binding CrimeCategory}"/>
+                            <TextBlock Foreground="White" Margin="2,2,2,2" Text="{Binding SumTotal}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+
+
+        <dxg:GridControl Grid.Row="1" Margin="20,0,20,0" FontSize="16" ItemsSource="{Binding CrimesCollection}"
+                         SelectionMode="Row">
+            <dxg:GridControl.View>
+                <dxg:TableView ShowGroupPanel="False" AutoWidth="True" RowStyle="{StaticResource RowStyle}"/>
+            </dxg:GridControl.View>
+
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Id" Header="Report Id" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="Category" Header="Category" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="Location.Latitude" Header="Latitude" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="Location.Longitude" Header="Longitude" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="Location.Street.Id" Header="Street Id" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="Location.Street.Name" Header="Street Name" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="LocationType" Header="LocationType" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="LocationSubType" Header="LocationSubType" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="OutcomeStatus.Category" Header="OutcomeStatus" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="OutcomeStatus.Date" Header="OutcomeStatus Date" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="PersistentId" Header="PersistentId" ReadOnly="True"/>
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+
+    </Grid>
+</dx:ThemedWindow>

@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>WPCRecruitmentTestApp</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <Authors>Harry Pengelly</Authors>
+    <Company>AB Dynamics</Company>
+    <AssemblyName>WPCRecruitmentTestApp</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\bin\debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\bin\release\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.Mvvm" Version="19.2.7" />
+    <PackageReference Include="DevExpress.WindowsDesktop.Wpf.Core" Version="19.2.7" />
+    <PackageReference Include="DevExpress.WindowsDesktop.Wpf.Grid" Version="19.2.7" />
+    <PackageReference Include="DevExpress.WindowsDesktop.Wpf.Themes.Office2019Black" Version="19.2.7" />
+    <PackageReference Include="DevExpress.WindowsDesktop.Wpf.Navigation" Version="19.2.7" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.0.1" />
+    <PackageReference Include="Ninject" Version="3.3.4" />
+    <PackageReference Include="ninject.extensions.conventions" Version="3.3.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2021.2.0" />
+    <PackageReference Include="PoliceUK" Version="1.0.5674.34783" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+</Project>
